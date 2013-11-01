@@ -8,6 +8,7 @@ An iOS program that does UI with only code.  No storyboards or nibs.
 
 2. Change AppDelegate to create a Navigation Controller and add a top level view controller
 
+<code>
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -26,3 +27,5 @@ An iOS program that does UI with only code.  No storyboards or nibs.
     return YES;
 
 }
+
+</code>
