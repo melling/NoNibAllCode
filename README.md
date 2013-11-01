@@ -29,7 +29,7 @@ An iOS program that does UI with only code.  No storyboards or nibs.
 
 </pre>
 
-See branch Step_1
+See github branch 'Step_1'
 
 ## Register custom UITableViewCell
 
@@ -48,6 +48,7 @@ Here's what it looks like when we register a nib:
 
 ## Create Detail View Controllers
 
+In MainNavTableViewController.m, add the following UITableViewController delegate method:
 <pre>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -58,3 +59,7 @@ Here's what it looks like when we register a nib:
 
 }
 </pre>
+
+We are creating a new UIViewController instance on every selection and having the navigationController push it onto its stack.  What we want to do, of course, is create our own custom UIViewController subclasses.
+
+
