@@ -17,10 +17,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    UINavigationController *navController = [[UINavigationController alloc] init];
+    self.window.rootViewController = navController;
+    // Do we want a tableview controller or regular uiviewcontroller?
+    
+//    UITableViewController *topLevelController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UIViewController *topLevelController = [[UIViewController alloc] init];
+    topLevelController.view.backgroundColor = [UIColor greenColor];
+    
+    [navController addChildViewController: topLevelController];
+    //    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
