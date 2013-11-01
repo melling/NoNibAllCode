@@ -1,5 +1,4 @@
-NoNibAllCode
-============
+# NoNibAllCode
 
 An iOS program that does UI with only code.  No storyboards or nibs.
 
@@ -32,6 +31,8 @@ An iOS program that does UI with only code.  No storyboards or nibs.
 
 See branch Step_1
 
+## Register custom UITableViewCell
+
 3. Create custom UITableViewController for main nav.  Had to subclass UITableViewCell so I could register them.  Might be better to give in and use xib's for table cells?
 
 [Setting style of UITableViewCell when using iOS 6 UITableView dequeueReusableCellWithIdentifier:forIndexPath:](http://stackoverflow.com/questions/13174972/setting-style-of-uitableviewcell-when-using-ios-6-uitableview-dequeuereusablecel)
@@ -43,4 +44,17 @@ Here's what it looks like when we register a nib:
 
 <pre>
   [self.tableView registerNib:[UINib nibWithNibName:@"MissedWordTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MissedWordCell"];
+</pre>
+
+## Create Detail View Controllers
+
+<pre>
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.title = [NSString stringWithFormat:@"ViewController #%ld", indexPath.row];
+    NSLog(@"VC: %ld", indexPath.row);
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
 </pre>

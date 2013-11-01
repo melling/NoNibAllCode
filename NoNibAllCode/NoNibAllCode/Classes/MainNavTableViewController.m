@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.mainNavList = @[@"One", @"Two", @"Three"];
+    self.mainNavList = @[@"ViewController #1", @"ViewController #2", @"ViewController #3"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -43,6 +43,7 @@
      It's probably better to give in and use xibs for TableCells?
      
      */
+
     [self.tableView registerClass:[MainNavTableCell class] forCellReuseIdentifier:@"MainNavCell"];
 
 }
@@ -67,14 +68,28 @@
     return self.mainNavList.count;
 }
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MainNavCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (cell == nil) {
+        NSLog(@"ERROR: Cell not dequeue");
+    }
     
     // Configure the cell...
     cell.textLabel.text = self.mainNavList[indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.title = [NSString stringWithFormat:@"ViewController #%ld", indexPath.row];
+    NSLog(@"VC: %ld", indexPath.row);
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 /*
