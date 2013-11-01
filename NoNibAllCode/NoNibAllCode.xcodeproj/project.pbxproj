@@ -22,6 +22,8 @@
 		3EF3F2AF1824318F00394A38 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF3F2931824318F00394A38 /* CoreData.framework */; };
 		3EF3F2B71824318F00394A38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EF3F2B51824318F00394A38 /* InfoPlist.strings */; };
 		3EF3F2B91824318F00394A38 /* NoNibAllCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF3F2B81824318F00394A38 /* NoNibAllCodeTests.m */; };
+		3EF3F2C41824377D00394A38 /* MainNavTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF3F2C31824377D00394A38 /* MainNavTableViewController.m */; };
+		3EF3F2C718243A2F00394A38 /* MainNavTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF3F2C618243A2F00394A38 /* MainNavTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		3EF3F2B41824318F00394A38 /* NoNibAllCodeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NoNibAllCodeTests-Info.plist"; sourceTree = "<group>"; };
 		3EF3F2B61824318F00394A38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3EF3F2B81824318F00394A38 /* NoNibAllCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoNibAllCodeTests.m; sourceTree = "<group>"; };
+		3EF3F2C21824377D00394A38 /* MainNavTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainNavTableViewController.h; path = Classes/MainNavTableViewController.h; sourceTree = "<group>"; };
+		3EF3F2C31824377D00394A38 /* MainNavTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavTableViewController.m; path = Classes/MainNavTableViewController.m; sourceTree = "<group>"; };
+		3EF3F2C518243A2F00394A38 /* MainNavTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainNavTableCell.h; path = Classes/MainNavTableCell.h; sourceTree = "<group>"; };
+		3EF3F2C618243A2F00394A38 /* MainNavTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavTableCell.m; path = Classes/MainNavTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,10 @@
 			children = (
 				3EF3F29E1824318F00394A38 /* AppDelegate.h */,
 				3EF3F29F1824318F00394A38 /* AppDelegate.m */,
+				3EF3F2C21824377D00394A38 /* MainNavTableViewController.h */,
+				3EF3F2C31824377D00394A38 /* MainNavTableViewController.m */,
+				3EF3F2C518243A2F00394A38 /* MainNavTableCell.h */,
+				3EF3F2C618243A2F00394A38 /* MainNavTableCell.m */,
 				3EF3F2A41824318F00394A38 /* Images.xcassets */,
 				3EF3F2A11824318F00394A38 /* NoNibAllCode.xcdatamodeld */,
 				3EF3F2961824318F00394A38 /* Supporting Files */,
@@ -248,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF3F2C41824377D00394A38 /* MainNavTableViewController.m in Sources */,
 				3EF3F2A01824318F00394A38 /* AppDelegate.m in Sources */,
+				3EF3F2C718243A2F00394A38 /* MainNavTableCell.m in Sources */,
 				3EF3F29C1824318F00394A38 /* main.m in Sources */,
 				3EF3F2A31824318F00394A38 /* NoNibAllCode.xcdatamodeld in Sources */,
 			);

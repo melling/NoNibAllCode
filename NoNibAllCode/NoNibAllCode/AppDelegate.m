@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "MainNavTableViewController.h"
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -22,8 +24,8 @@
     self.window.rootViewController = navController;
     // Do we want a tableview controller or regular uiviewcontroller?
     
-//    UITableViewController *topLevelController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    UIViewController *topLevelController = [[UIViewController alloc] init];
+    UITableViewController *topLevelController = [[MainNavTableViewController alloc] initWithStyle:UITableViewStylePlain];
+//    UIViewController *topLevelController = [[UIViewController alloc] init];
     topLevelController.view.backgroundColor = [UIColor greenColor];
     
     [navController addChildViewController: topLevelController];
