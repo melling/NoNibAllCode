@@ -39,3 +39,8 @@ See branch Step_1
 [self.tableView registerClass:[MainNavTableCell class] forCellReuseIdentifier:@"MainNavCell"];
 </pre>
 
+Here's what it looks like when we register a nib:
+
+<pre>
+  [self.tableView registerNib:[UINib nibWithNibName:@"MissedWordTableCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MissedWordCell"];
+</pre>
