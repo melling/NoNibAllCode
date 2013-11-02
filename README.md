@@ -29,7 +29,7 @@ An iOS program that does UI with only code.  No storyboards or nibs.
 
 </pre>
 
-See github branch 'Step_1'
+See git branch: Step_1
 
 ## Register custom UITableViewCell
 
@@ -53,13 +53,17 @@ In MainNavTableViewController.m, add the following UITableViewController delegat
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIViewController *vc = [[UIViewController alloc] init];
-    vc.title = [NSString stringWithFormat:@"ViewController #%ld", indexPath.row];
-    NSLog(@"VC: %ld", indexPath.row);
+    vc.title = [NSString stringWithFormat:@"ViewController #%d", indexPath.row];
+    vc.view.backgroundColor = self.viewControllerColors[indexPath.row]; // Add a little color
     [self.navigationController pushViewController:vc animated:YES];
 
 }
 </pre>
 
 We are creating a new UIViewController instance on every selection and having the navigationController push it onto its stack.  What we want to do, of course, is create our own custom UIViewController subclasses.
+
+See git branch: Step_2
+
+## Autolayout
 
 

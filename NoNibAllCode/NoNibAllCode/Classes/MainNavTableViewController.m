@@ -12,6 +12,7 @@
 @interface MainNavTableViewController ()
 
 @property(strong, nonatomic) NSArray *mainNavList;
+@property(strong, nonatomic) NSArray *viewControllerColors;
 
 @end
 
@@ -30,7 +31,7 @@
 {
     [super viewDidLoad];
     self.mainNavList = @[@"ViewController #1", @"ViewController #2", @"ViewController #3"];
-    
+    self.viewControllerColors = @[[UIColor redColor], [UIColor greenColor], [UIColor blueColor]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -86,8 +87,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIViewController *vc = [[UIViewController alloc] init];
-    vc.title = [NSString stringWithFormat:@"ViewController #%ld", indexPath.row];
-    NSLog(@"VC: %ld", indexPath.row);
+    vc.title = [NSString stringWithFormat:@"ViewController #%d", indexPath.row];
+    vc.view.backgroundColor = self.viewControllerColors[indexPath.row]; // Add a little color
     [self.navigationController pushViewController:vc animated:YES];
 
 }
