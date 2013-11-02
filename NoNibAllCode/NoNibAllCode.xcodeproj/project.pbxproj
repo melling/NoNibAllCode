@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E14D2A518248B68004E44DA /* ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E14D2A418248B68004E44DA /* ButtonViewController.m */; };
 		3EF3F28E1824318F00394A38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF3F28D1824318F00394A38 /* Foundation.framework */; };
 		3EF3F2901824318F00394A38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF3F28F1824318F00394A38 /* CoreGraphics.framework */; };
 		3EF3F2921824318F00394A38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF3F2911824318F00394A38 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E14D2A318248B68004E44DA /* ButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonViewController.h; path = Classes/ButtonViewController.h; sourceTree = "<group>"; };
+		3E14D2A418248B68004E44DA /* ButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonViewController.m; path = Classes/ButtonViewController.m; sourceTree = "<group>"; };
 		3EF3F28A1824318F00394A38 /* NoNibAllCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNibAllCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF3F28D1824318F00394A38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3EF3F28F1824318F00394A38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				3EF3F2C31824377D00394A38 /* MainNavTableViewController.m */,
 				3EF3F2C518243A2F00394A38 /* MainNavTableCell.h */,
 				3EF3F2C618243A2F00394A38 /* MainNavTableCell.m */,
+				3E14D2A318248B68004E44DA /* ButtonViewController.h */,
+				3E14D2A418248B68004E44DA /* ButtonViewController.m */,
 				3EF3F2A41824318F00394A38 /* Images.xcassets */,
 				3EF3F2A11824318F00394A38 /* NoNibAllCode.xcdatamodeld */,
 				3EF3F2961824318F00394A38 /* Supporting Files */,
@@ -262,6 +267,7 @@
 				3EF3F2A01824318F00394A38 /* AppDelegate.m in Sources */,
 				3EF3F2C718243A2F00394A38 /* MainNavTableCell.m in Sources */,
 				3EF3F29C1824318F00394A38 /* main.m in Sources */,
+				3E14D2A518248B68004E44DA /* ButtonViewController.m in Sources */,
 				3EF3F2A31824318F00394A38 /* NoNibAllCode.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +471,7 @@
 				3EF3F2BE1824318F00394A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EF3F2BF1824318F00394A38 /* Build configuration list for PBXNativeTarget "NoNibAllCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +480,7 @@
 				3EF3F2C11824318F00394A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

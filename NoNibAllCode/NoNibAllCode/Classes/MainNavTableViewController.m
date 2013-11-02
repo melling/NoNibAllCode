@@ -8,6 +8,7 @@
 
 #import "MainNavTableViewController.h"
 #import "MainNavTableCell.h"
+#import "ButtonViewController.h"
 
 @interface MainNavTableViewController ()
 
@@ -86,9 +87,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.title = [NSString stringWithFormat:@"ViewController #%d", indexPath.row];
+    UIViewController *vc;
+    
+    switch (indexPath.row) {
+        case 0:
+            vc = [[ButtonViewController alloc] init];
+            vc.title = @"Button Home";
+            break;
+            
+        default:
+                  vc = [[UIViewController alloc] init];
+            vc.title = [NSString stringWithFormat:@"ViewController #%d", indexPath.row];
+
+            break;
+    }
     vc.view.backgroundColor = self.viewControllerColors[indexPath.row]; // Add a little color
+
     [self.navigationController pushViewController:vc animated:YES];
 
 }
