@@ -42,20 +42,22 @@
 
 #pragma mark Button Actions
 
+// Using (id)sender is common but autocompletion is better with type
+
 - (IBAction)transition1BtnAction:(UIButton *)sender {
-    NSLog(@"Boom!");
+    NSLog(@"Button #1 Pressed");
 }
 
 - (IBAction)transition2BtnAction:(UIButton *)sender {
-    NSLog(@"Boom!");
+    NSLog(@"Button #2 Pressed");
 }
 
 - (IBAction)transition3BtnAction:(UIButton *)sender {
-    NSLog(@"Boom!");
+    NSLog(@"Button #3 Pressed");
 }
 
 - (IBAction)transition4BtnAction:(UIButton *)sender {
-    NSLog(@"Boom!");
+    NSLog(@"Button #4 Pressed");
 }
 
 #pragma mark - Draw Screen
